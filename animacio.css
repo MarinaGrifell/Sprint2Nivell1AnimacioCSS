@@ -1,0 +1,38 @@
+.ball {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 0 0,
+            rgb(0, 174, 255) 25%,
+            rgb(41, 0, 153) 70%,
+            hsl(60, 100%, 1%));
+}
+
+.bounce {
+    animation: bounce 3.14s linear 0s infinite alternate;
+}
+
+.bounceA {
+    animation: bounceA 1.03s ease-in 0s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(calc(100vw - 10vmin));
+    }
+}
+
+@keyframes bounceA {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(calc(100vh - 10vmin));
+    }
+}
